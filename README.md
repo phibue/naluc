@@ -2,6 +2,7 @@
 No Arithmetic Unit Computer: If you can count and have memory you can do all calculations 
 
 Highly inspired by the projects of agp.cooper, weird CPU and CPU4, I try to design my own.
+
 Goals:
 - Use of 74xxxx Chips, except for memory
 - Keep it simple
