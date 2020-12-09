@@ -29,10 +29,18 @@ Possibilities to add some additional chips vs. simplicity:
 9. And finally, to make it quite weird: Memory access time is 10ns. A 16bit adder using 74HC181 is much slower. The concept of the weird CPU fits well because the result from the adder can be read several instructions later. The processor clock can be much faster than the adder speed. 
 However I decided to remove the adder because it is slow and needs too many chips. The hardware stack pointer is able to count up and down. This is all which is necessary to build up a lookup table for an 8 bit adder. Ok, this lookup table needs 16bit input and 8bit output. This eats up 64kB of memory. The memory is large enough. The same can be done with multiplication or any other operation. The 10ns memory is faster than everything else I could build anyway. --> Without arithmetic unit the processor will be much faster at arithmetics!  
 
+Conclusion:
+- At a closer look it becomes clear that such a design ends up in quite a large number of chips. I would prefer something small and simple.
+- It turns out that instruction decoding easily becomes really complicated. The number of instructions must be kept really small.
+- Especially interrupts add quite a lot of complexity. 
+- Separate program memory: 
+  * using RAM: Additional hardware is required to initialize this RAM. An additional instruction is necessary to write on this RAM
+  * using ROM: Much simpler. In that case the program is static an could contain an interpreter language. An interpreter language could make programming easy.
+    However: During development this ROM needs to be programmable somehow.
+- Probably doing everything on an FPGA is the better approach. Building with 74xx can be done in a second step.	
 
 
 
 
 
-
-
+§+Q2q
