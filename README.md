@@ -38,9 +38,3 @@ Conclusion:
   * using ROM: Much simpler. In that case the program is static an could contain an interpreter language. An interpreter language could make programming easy.
     However: During development this ROM needs to be programmable somehow.
 - Probably doing everything on an FPGA is the better approach. Building with 74xx can be done in a second step.	
-
-
-
-
-
-§+Q2q
